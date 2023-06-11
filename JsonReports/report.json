@@ -12,12 +12,12 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "c:/Users/Mamdouh/git/PlaywrightWithTS/test-results",
+        "outputDir": "C:/Users/Mamdouh/git/PlaywrightWithTS/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "",
         "name": "",
-        "testDir": "c:/Users/Mamdouh/git/PlaywrightWithTS",
+        "testDir": "C:/Users/Mamdouh/git/PlaywrightWithTS",
         "testIgnore": [],
         "testMatch": [
           "pagetests/addtocart.test.ts"
@@ -50,13 +50,13 @@
       "max": 5,
       "threshold": 15000
     },
-    "configFile": "c:\\Users\\Mamdouh\\git\\PlaywrightWithTS\\playwright.config.ts",
-    "rootDir": "c:/Users/Mamdouh/git/PlaywrightWithTS",
+    "configFile": "C:\\Users\\Mamdouh\\git\\PlaywrightWithTS\\playwright.config.ts",
+    "rootDir": "C:/Users/Mamdouh/git/PlaywrightWithTS",
     "quiet": false,
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.32.1",
-    "workers": 1,
+    "workers": 8,
     "webServer": null
   },
   "suites": [
@@ -65,46 +65,114 @@
       "file": "pagetests/addtocart.test.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "Add To Cart Test_03",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "test demo pom",
+          "file": "pagetests/addtocart.test.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
+              "title": "Register Test_01",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 12307,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-06-11T10:17:39.085Z",
-                  "attachments": []
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 10529,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-11T11:39:01.852Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
+              "id": "b6194d103919130ed43b-12cfedb5a23e6ae1e0c7",
+              "file": "pagetests/addtocart.test.ts",
+              "line": 6,
+              "column": 9
+            },
+            {
+              "title": "Login Test_02",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 7378,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-11T11:39:13.446Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b6194d103919130ed43b-6f041579629ffb4f7844",
+              "file": "pagetests/addtocart.test.ts",
+              "line": 20,
+              "column": 9
+            },
+            {
+              "title": "Add To Cart Test_03",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 14148,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-11T11:39:20.827Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b6194d103919130ed43b-84c92e36623f3180f954",
+              "file": "pagetests/addtocart.test.ts",
+              "line": 27,
+              "column": 9
             }
-          ],
-          "id": "b6194d103919130ed43b-0aa141b1446b8e7500de",
-          "file": "pagetests/addtocart.test.ts",
-          "line": 34,
-          "column": 5
+          ]
         }
       ]
     }
   ],
-  "errors": [
-    {
-      "message": "expect.toBeInViewport: Browser has been closed\n\n\u001b[31mFailed worker ran 1 test:\u001b[39m\npagetests\\addtocart.test.ts:34:5 › Add To Cart Test_03",
-      "stack": "Error: expect.toBeInViewport: Browser has been closed\n\n\u001b[31mFailed worker ran 1 test:\u001b[39m\npagetests\\addtocart.test.ts:34:5 › Add To Cart Test_03\n    at c:\\Users\\Mamdouh\\git\\PlaywrightWithTS\\pagetests\\addtocart.test.ts:45:45"
-    }
-  ]
+  "errors": []
 }

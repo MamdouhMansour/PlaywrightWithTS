@@ -1,47 +1,37 @@
-import { expect, test } from "@playwright/test";
-import RegisterPage from "../pages/RegistrationPage";
-import LoginPage from "../pages/LoginPage";
-import HomePage from "../pages/HomePage";
-import Desktops from "../pages/Desktops";
-
-const email = "mamdouh1@gmail.com";
-const password = "Aa123456";
+import { expect, test } from "../pageTestFixtures/TestFixtures";
+import * as data from "../pages-test-data/test_data.json";
 
 
-test("Register Test_01", async ({ page, baseURL }) => {
-    const register = new RegisterPage(page);
-    await page.goto(`${baseURL}account/register`);
+test.describe("test demo pom", async () => {
+    test("Register Test_01", async ({ page, baseURL, registerPage }) => {
+        await page.goto(`${baseURL}account/register`);
 
-    await register.enterFirstName("Mamdouh");
-    await register.enterLastName("Mansour");
-    await register.enterEmail(email);
-    await register.enterPhone("+201095033921");
-    await register.enterPassword(password);
-    await register.enterConfirmPassword(password);
-    await register.checkAgreePolicy();
-    await register.clickContinueRegister();
+        await registerPage.enterFirstName(data.firstname);
+        await registerPage.enterLastName(data.lastname);
+        await registerPage.enterEmail(data.email);
+        await registerPage.enterPhone(data.phonenumber);
+        await registerPage.enterPassword(data.password);
+        await registerPage.enterConfirmPassword(data.password);
+        await registerPage.checkAgreePolicy();
+        await registerPage.clickContinueRegister();
 
-})
+    })
 
-test("Login Test_02", async ({ page, baseURL }) => {
-    const login = new LoginPage(page);
-    await page.goto(`${baseURL}account/login`);
-    await login.login(email, password);
-    expect(await page.title()).toBe("My Account");
-})
+    test("Login Test_02", async ({ page, baseURL, loginPage }) => {
+        await page.goto(`${baseURL}account/login`);
+        await loginPage.login(data.email, data.password);
+        expect(await page.title()).toBe("My Account");
+    })
 
 
-test("Add To Cart Test_03", async ({ page, baseURL }) => {
-    const login = new LoginPage(page);
-    const home = new HomePage(page);
-    const desktops = new Desktops(page);
-
-    await page.goto(`${baseURL}account/login`);
-    await login.login(email, password);
-    await page.goto(`${baseURL}common/home`);
-    await home.clickOnDesktop();
-    await desktops.hoverOverItem();
-    await desktops.addItemToCart();
-    expect(await desktops.isToastVisible()).toBeInViewport();
-    page.waitForLoadState("networkidle");
+    test("Add To Cart Test_03", async ({ page, baseURL, loginPage, homePage, desktopPage }) => {
+        await page.goto(`${baseURL}account/login`);
+        await loginPage.login(data.email, data.password);
+        await page.goto(`${baseURL}common/home`);
+        await homePage.clickOnDesktop();
+        await desktopPage.hoverOverItem();
+        await desktopPage.addItemToCart();
+        expect(await desktopPage.isToastVisible()).toBeInViewport();
+        page.waitForLoadState("networkidle");
+    })
 })
