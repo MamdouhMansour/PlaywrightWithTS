@@ -1,0 +1,110 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "c:/Users/Mamdouh/git/PlaywrightWithTS/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "",
+        "name": "",
+        "testDir": "c:/Users/Mamdouh/git/PlaywrightWithTS",
+        "testIgnore": [],
+        "testMatch": [
+          "pagetests/addtocart.test.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "JsonReports/report.json"
+        }
+      ],
+      [
+        "dot",
+        {
+          "outputFile": "DotReports/report.dot"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFile": "HTMLReports/report.html",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "configFile": "c:\\Users\\Mamdouh\\git\\PlaywrightWithTS\\playwright.config.ts",
+    "rootDir": "c:/Users/Mamdouh/git/PlaywrightWithTS",
+    "quiet": false,
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.32.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "pagetests\\addtocart.test.ts",
+      "file": "pagetests/addtocart.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Add To Cart Test_03",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12307,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-06-11T10:17:39.085Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b6194d103919130ed43b-0aa141b1446b8e7500de",
+          "file": "pagetests/addtocart.test.ts",
+          "line": 34,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "message": "expect.toBeInViewport: Browser has been closed\n\n\u001b[31mFailed worker ran 1 test:\u001b[39m\npagetests\\addtocart.test.ts:34:5 › Add To Cart Test_03",
+      "stack": "Error: expect.toBeInViewport: Browser has been closed\n\n\u001b[31mFailed worker ran 1 test:\u001b[39m\npagetests\\addtocart.test.ts:34:5 › Add To Cart Test_03\n    at c:\\Users\\Mamdouh\\git\\PlaywrightWithTS\\pagetests\\addtocart.test.ts:45:45"
+    }
+  ]
+}
