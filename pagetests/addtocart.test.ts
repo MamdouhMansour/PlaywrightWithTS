@@ -1,7 +1,6 @@
 import { expect, test } from "../pageTestFixtures/TestFixtures";
 import * as data from "../pages-test-data/test_data.json";
 
-
 test.describe("test demo pom", async () => {
     test("Register Test_01", async ({ page, baseURL, registerPage }) => {
         await page.goto(`${baseURL}account/register`);

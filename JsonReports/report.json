@@ -15,8 +15,34 @@
         "outputDir": "C:/Users/Mamdouh/git/PlaywrightWithTS/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "id": "",
-        "name": "",
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Mamdouh/git/PlaywrightWithTS",
+        "testIgnore": [],
+        "testMatch": [
+          "pagetests/addtocart.test.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Mamdouh/git/PlaywrightWithTS/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/Mamdouh/git/PlaywrightWithTS",
+        "testIgnore": [],
+        "testMatch": [
+          "pagetests/addtocart.test.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Mamdouh/git/PlaywrightWithTS/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "webkit",
+        "name": "webkit",
         "testDir": "C:/Users/Mamdouh/git/PlaywrightWithTS",
         "testIgnore": [],
         "testMatch": [
@@ -70,7 +96,7 @@
         {
           "title": "test demo pom",
           "file": "pagetests/addtocart.test.ts",
-          "line": 5,
+          "line": 4,
           "column": 6,
           "specs": [
             {
@@ -82,27 +108,98 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 10529,
+                      "duration": 9708,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-06-11T11:39:01.852Z",
+                      "startTime": "2023-06-11T19:04:03.116Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "timedOut",
+                      "duration": 30000,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "message": "Pending operations:\n  - page.click at pages\\RegistrationPage.ts:34:25\n"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Mamdouh\\git\\PlaywrightWithTS\\pages\\RegistrationPage.ts",
+                            "column": 25,
+                            "line": 34
+                          },
+                          "message": "Error: page.click: Target closed\n=========================== logs ===========================\nwaiting for locator('xpath=//label[@for=\\'input-agree\\']')\n  locator resolved to <label for=\"input-agree\" class=\"custom-control-label\">…</label>\nattempting click action\n  waiting for element to be visible, enabled and stable\n  element is visible, enabled and stable\n  scrolling into view if needed\n  done scrolling\n  performing click action\n============================================================\n\n\u001b[90m   at \u001b[39mpages\\RegistrationPage.ts:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m checkAgreePolicy() {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m\"//label[@for='input-agree']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 35 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 36 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 37 |\u001b[39m     \u001b[36masync\u001b[39m clickContinueRegister() {\u001b[0m\n\n\u001b[2m    at RegisterPage.checkAgreePolicy (C:\\Users\\Mamdouh\\git\\PlaywrightWithTS\\pages\\RegistrationPage.ts:34:25)\u001b[22m\n\u001b[2m    at C:\\Users\\Mamdouh\\git\\PlaywrightWithTS\\pagetests\\addtocart.test.ts:14:28\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-11T19:04:03.126Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Mamdouh\\git\\PlaywrightWithTS\\test-results\\pagetests-addtocart-test-demo-pom-Register-Test-01-firefox\\video.webm"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Mamdouh\\git\\PlaywrightWithTS\\test-results\\pagetests-addtocart-test-demo-pom-Register-Test-01-firefox\\test-failed-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                },
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 20547,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-11T19:04:03.114Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "b6194d103919130ed43b-12cfedb5a23e6ae1e0c7",
+              "id": "b6194d103919130ed43b-76ecf7518a42cba539ac",
               "file": "pagetests/addtocart.test.ts",
-              "line": 6,
+              "line": 5,
               "column": 9
             },
             {
@@ -114,27 +211,69 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 7378,
+                      "duration": 7143,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-06-11T11:39:13.446Z",
+                      "startTime": "2023-06-11T19:04:13.939Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 8685,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-11T19:04:38.598Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 9860,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-11T19:04:25.708Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "b6194d103919130ed43b-6f041579629ffb4f7844",
+              "id": "b6194d103919130ed43b-1f683e3500c4843399ba",
               "file": "pagetests/addtocart.test.ts",
-              "line": 20,
+              "line": 19,
               "column": 9
             },
             {
@@ -146,27 +285,90 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 14148,
+                      "duration": 14185,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-06-11T11:39:20.827Z",
+                      "startTime": "2023-06-11T19:04:21.084Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
+                },
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 13673,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-11T19:04:49.047Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "timedOut",
+                      "duration": 30000,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "message": "Pending operations:\n  - locator.click at pages\\Desktops.ts:14:85\n"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-11T19:04:35.570Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Mamdouh\\git\\PlaywrightWithTS\\test-results\\pagetests-addtocart-test-demo-pom-Add-To-Cart-Test-03-webkit\\video.webm"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Mamdouh\\git\\PlaywrightWithTS\\test-results\\pagetests-addtocart-test-demo-pom-Add-To-Cart-Test-03-webkit\\test-failed-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
                 }
               ],
-              "id": "b6194d103919130ed43b-84c92e36623f3180f954",
+              "id": "b6194d103919130ed43b-131d1ea2cf4223da6ce2",
               "file": "pagetests/addtocart.test.ts",
-              "line": 27,
+              "line": 26,
               "column": 9
             }
           ]
